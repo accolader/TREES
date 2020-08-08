@@ -33,8 +33,8 @@
 
 
 var sampleSite = {
-    radius: 5,
-    fillColor: "#ff7800",
+    radius: 8,
+    fillColor: "#0074D9",
     color: "#000",
     weight: 1,
     opacity: 1,
@@ -47,5 +47,7 @@ L.geoJson(cso, {
     return L.circleMarker(latlng, sampleSite);
   }
 }).bindPopup(function (layer) {
-    return ("cso site: " + layer.feature.properties.ID)
+    return ("cso site: " + layer.feature.properties.ID +"<br>" +
+    "address:" + layer.feature.properties.Address + "<br>" + "Discharge: " + layer.feature.properties.Discharge )
+
 }).addTo(map);
