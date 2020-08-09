@@ -34,7 +34,7 @@
 
 var sampleSite = {
     radius: 8,
-    fillColor: "#0074D9",
+    fillColor: "#7FDBFF",
     color: "#000",
     weight: 1,
     opacity: 1,
@@ -47,7 +47,8 @@ L.geoJson(cso, {
     return L.circleMarker(latlng, sampleSite);
   }
 }).bindPopup(function (layer) {
-    return ("cso site: " + layer.feature.properties.ID +"<br>" +
-    "address:" + layer.feature.properties.Address + "<br>" + "Discharge: " + layer.feature.properties.Discharge )
+    return ("CSO Site: " + layer.feature.properties.ID +"<br>" +
+    "Address:" + layer.feature.properties.Address + "<br>" + "Discharge: " + layer.feature.properties.Discharge + "<br>" +
+     "Interceptor: " + layer.feature.properties.Interceptor  )
 
 }).addTo(map);
