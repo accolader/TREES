@@ -34,7 +34,7 @@
 
 var sampleSite = {
     radius: 8,
-    fillColor: "#7FDBFF",
+    fillColor: "red",
     color: "#000",
     weight: 1,
     opacity: 1,
